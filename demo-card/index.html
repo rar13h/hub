@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Rivera — Digital Business Card</title>
+<style>
+  :root {
+    --paper: #fbfaf9; --ink: #1a1c1e; --sub: #5b5f63;
+    --navy: #1d2d3d; --accent: #6b5344; --hair: #e3ddd6; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--paper); color: var(--ink); font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 40px 16px; }
+  .card { width: 100%; max-width: 380px; }
+  .avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--navy); color: var(--paper); display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 600; letter-spacing: 0.02em; margin: 0 auto 18px; }
+  h1 { text-align: center; font-size: 22px; margin: 0 0 2px; letter-spacing: -0.01em; }
+  .title { text-align: center; color: var(--sub); font-size: 14px; margin: 0 0 1px; }
+  .org { text-align: center; color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin: 0 0 28px; }
+  .actions { display: grid; gap: 10px; margin-bottom: 28px; }
+  .btn { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--hair); background: var(--card); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .btn.primary { background: var(--navy); color: var(--paper); border-color: var(--navy); font-weight: 600; }
+  .icon { width: 20px; text-align: center; flex-shrink: 0; }
+  .qr-section { text-align: center; border-top: 1px solid var(--hair); padding-top: 24px; }
+  .qr-section img { width: 140px; height: 140px; border-radius: 8px; }
+  .qr-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sub); margin-top: 10px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">AR</div>
+    <h1>Alex Rivera</h1>
+    <p class="title">Small Business Consultant</p>
+    <p class="org">Ek Din Consulting</p>
+
+    <div class="actions">
+      <a class="btn primary" href="alex.vcf" download>
+        <span class="icon">＋</span> Save to Contacts
+      </a>
+      <a class="btn" href="tel:+15551234567">
+        <span class="icon">☎</span> (555) 123-4567
+      </a>
+      <a class="btn" href="mailto:alex@example.com">
+        <span class="icon">✉</span> alex@example.com
+      </a>
+      <a class="btn" href="https://rar13h.github.io/technical-consultant-website-design/" target="_blank" rel="noopener">
+        <span class="icon">🌐</span> View website
+      </a>
+    </div>
+
+    <div class="qr-section">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACgElEQVR4nO1bQY6kMAwsB6Q+gjQP6KfAD/ZJo33S/gCeMj8gx5ZAHtlOepkbc9hta2If0gnUoSTLduG4iXHR1nQVCQQ0BRQBRaZiMwCaM5G+sWOx3gnXq5Z+LrRjNSD3wDrKY9mpTfpqc8M1oJAQUvccxLx1jPW+g3/rM4m82RPXlqH9l1O3SxYknj4I7I5rah7anw/Dgxj5bdcDYdj+A4EUUHwTyszqopIENfWVajUw8+KJa+vQw3Sfagt6/9Bw65hmFR36anTDtW1oL9FTD7n8sqoMXf45gRRQfAeaS+2y/LcMD1EaB9H7dogclMiL2PIBhUp2XoZdHCXF68tigt6KV3o119Q8FCYwJl3MMyYJTWXwUr+dObyFl0N7UxQqB5EPkRo3pulPlfHTNhI74ZoCCqlR2m+iWeNoE5eJrXfpRg21JQUXXNuGouQ5LnXrXMEk3iQ7WjpcXs41NQ/t7WedpXlRTwRIOlwkykQiTuyCa0CTqfWSBOWJZj2NrXzjukQmdOGtouCfQt0WkYinnKjXJsvLuabmof3fLSMTeP0lvQxSiXgTsXhjWqnbHXBNAYVpwvuDiFQE6oWWNTQ08vTOyw3XtqGwJFiuiGs6VCVoL3QXmdAHFMVHptblwVAFvUWUfjaHgnf2vSVmEaWtXcmJVSfqOw5v4eVQ1BDSiZnaMSxW4y00oac+4a5b1RWMPMryphMasut2hCZ0OfOEMqFmY2p2tXVQKWjJB9dLllqAdkyztQi16SRSg8uYBrxxReuakJ91yy4in6C4jfQ48wS5fsT5XtI8qJM1yQfX1qHHeeZJZzBWqVbrqO2nZ5M3eeDaNpTiH0EI6GVLAcVl+wTvi4lMUnjwigAAAABJRU5ErkJggg==" alt="QR code to this card">
+      <div class="qr-label">Scan to share this card</div>
+    </div>
+  </div>
+</body>
+</html>
