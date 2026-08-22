@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom Barlow — Ocean Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint: #EDF2EC; --indigo: #13264D; --cyan: #0095A4;
+    --frost: #99D3D9; --copper: #DD9787; --ink: #1a1c1e; --sub: #5b5f63;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--mint); color: var(--ink); font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 40px 16px; }
+  .card { width: 100%; max-width: 380px; }
+  .avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--indigo); color: var(--mint); display: flex; align-items: center; justify-content: center; font-family: "Fraunces", serif; font-size: 30px; font-weight: 600; letter-spacing: 0.02em; margin: 0 auto 18px; }
+  h1 { font-family: "Fraunces", serif; text-align: center; font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; color: var(--indigo); }
+  .title { text-align: center; color: var(--cyan); font-weight: 600; font-size: 14px; margin: 0 0 1px; }
+  .org { text-align: center; color: var(--sub); font-size: 13px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; margin: 0 0 28px; }
+  .actions { display: grid; gap: 10px; margin-bottom: 28px; }
+  .btn { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--frost); background: #ffffff; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .btn.primary { background: var(--indigo); color: var(--mint); border-color: var(--indigo); font-weight: 600; }
+  .icon { width: 20px; text-align: center; flex-shrink: 0; }
+  .qr-section { text-align: center; border-top: 1px solid var(--frost); padding-top: 24px; }
+  .qr-section img { width: 140px; height: 140px; border-radius: 8px; border: 4px solid #ffffff; box-shadow: 0 0 0 1px var(--frost); }
+  .qr-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sub); margin-top: 10px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">TB</div>
+    <h1>Tom Barlow</h1>
+    <p class="title">Adaptive Equipment Supervisor</p>
+    <p class="org">Ocean Therapy</p>
+
+    <div class="actions">
+      <a class="btn primary" href="tom-barlow.vcf" download>
+        <span class="icon">＋</span> Save to Contacts
+      </a>
+      <a class="btn" href="tel:+15617226211">
+        <span class="icon">☎</span> (561) 722-6211
+      </a>
+      <a class="btn" href="mailto:oceantherapyinc@gmail.com">
+        <span class="icon">✉</span> oceantherapyinc@gmail.com
+      </a>
+      <a class="btn" href="https://oceantherapyinc.com" target="_blank" rel="noopener">
+        <span class="icon">🌐</span> OceanTherapyInc.com
+      </a>
+    </div>
+
+    <div class="qr-section">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAADPUlEQVR4nO1cbWrkMAx9cgL9mUAP0KN4brBHWvZIe4PkKD1AIf5ZSNAiycmkXchMlu3UIXo/wiR+FIF41oflEmMP+rCLDjh/G+HG+mc4fxvhfPxEGZf5I10wEV1SLb+Aeb0u0/5dCCfkV6wAkngwEekv7pp3MlLU9eFR9uxB2MXGSflk4hTV0ssI7lAx+lYCri6kRd1l2n8/wtn5cRDXvrwT/RyArNpvtOcGwi3Cyfn1+qVhoG/fasupexJP/xgfak9w/hf4l/PbVCMOEyi+1mCkZyC+1qM5Hulf/n5w/rfzJ0uPgfTE+YGKLXXWqNvreluq/XsQTsavszgVacoJM5pRdupKhD0u6n6EPcH5/5UP5mGujyS14k6/NpJEN/p5lPpIgrC8dqXZH5y/DRYPqlfNl7I1r0QMrY6HuQh2/x6Mj+zVZpapuVH0y4tXReKu3yPXR/H3E2tBRD1VI6FREVcjIT2PEpSpUPuD87fB1ppcYLHWUJlqs6Zlp3b9HpA/mTitK6lN6Ghdq4ks3erbJbEu0f49CCfjQ8NsjrUWcCX0ajrN+rjGZI+/R61/KXeoJOBKawPNkKvevn0Da0y2TlZp9gfnb6KGZFCsrUlNo8SX+sr9pVr1ntn7k0fkY10GaaZlVe+82snTNmntfpRmf3D+XfwksxqJiDs95NdYixl6EvyRfy+C80vQL9Sh2pX80LDCZ0pp9gfnb4O1ORU/5M/Wley09JXsWruXnj8fkY/rhEaW7nXWqpn1m7vT7t9j8qt84CsDOTZfJwF3vUk3I/z899D7M+eEKh8tzA0NxNXu7fnz8fh17k/mYwRQHGD9DQLqkfXMv2+lEvb694B8zBF3OQact+ucZFk6rSJ2/R78/kKjJ8Ey1b4cB+M6hPUylmn/LoQT7s+V+ZFyk9IOkaRJCTv2tU36MfYE53/h/QVYEaxK1vtHMi5ro5N+P+X48+3Q+Q35kVpw34LkAe4vqmTReWn2B+fv48frkF0jIr7Fv4Hg/AL4nEcn50mOX9LLiPNU3drxZdp/P8JJ619FepZbg2+gyBPJ/RSpevV+yiCHSEOB9gfnb4L8/zNsImwv/wXnbyPcWP8M52MTfwBvIe6QnwG41gAAAABJRU5ErkJggg==" alt="QR code to this card">
+      <div class="qr-label">Scan to share this card</div>
+    </div>
+  </div>
+</body>
+</html>
