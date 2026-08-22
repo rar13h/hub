@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaison Joseph, CPA — Digital Business Card</title>
+<style>
+  :root {
+    --bg: #F5FAF6; --ink: #1a1c1e; --sub: #5b5f63;
+    --primary: #14532D; --accent: #2F855A; --border: #CFE8D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 36px 16px; }
+  .card { width: 100%; max-width: 380px; text-align: center; }
+  .org-name { font-size: 20px; font-weight: 800; color: var(--primary); letter-spacing: -0.01em; margin: 0 0 26px; line-height: 1.2; }
+  .qr-link { display: inline-block; }
+  .qr-wrap { margin: 0 0 26px; }
+  .qr-wrap img { width: 200px; height: 200px; border-radius: 12px; border: 6px solid #ffffff; box-shadow: 0 0 0 1px var(--border); }
+  h1 { font-size: 28px; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.01em; color: var(--primary); }
+  .title { color: var(--accent); font-weight: 700; font-size: 19px; margin: 0 0 26px; }
+  .actions { display: grid; gap: 10px; margin-bottom: 8px; text-align: left; }
+  .btn { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; background: none; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .btn.disabled { color: var(--sub); font-style: italic; cursor: default; }
+  .icon { width: 20px; text-align: center; flex-shrink: 0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="org-name">J Joseph Enterprises, LLC</div>
+
+    <a class="qr-link" href="jaison-joseph.vcf" download aria-label="Tap to save to contacts">
+      <div class="qr-wrap">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAADBUlEQVR4nO1cbYrbMBB9mgj2pw17gB5FuUGPVHqk3sA+Sg6wYP8M2KjMjGQnafFGhWYtPO9HNrYeYeDxRjP6WBdRgp6K6IDxt0GfjD/C+Nug4/FHl3DG7NJjO/Onh3MtkMf9PuMvAh2Qf4oCfdF/m/jPKSJE/jZ6IMj48Kp4SkBFbByU79ScgvGNlZ4d+hZAEFXZ0+cXxvM8qIDLMD5mF+NwirHjBxH5a+PZBG0P4+h8//DsgNPk0Hx4hGH2sf8+vDQeMv5/0Dfqw/h+2y317QcQLn4CGn4//svvk/G/nD9reSzP7iwF1eUtyofOur2Mt3uNvwR0MD7i38BTr86/aO4H9hY/Gf/T/tdzLp6dWle8eub+CI10SrmSXvhFION/tX8HboPUnhO7NrXDMiDv1MQyYP6tND8P/F0Nm/XtmsiLHElaBOmZ9hY/Gf95/w6SlZOqIrd6Wpxs/q3Yvx2reuPfYRF+EPVFZNO3Sv7o4X5cfBIUzdWpifuW7SyVlpZgL4qnCFRGx9H4WJNv8urdR+yyp1ORtbf4yfjbiFo1L23umqmDZGXdWOLUbPrWyR95jZKTtGz46voVW/cnb/3K+pVuIr0qniJQGR1H9m8naXitrxg6oJW0+bdifSe26aIvr2qEtYhek/Te4ifjbyNq39MsIj+0vvHW3aZvrfpCptl8KifcbTLEFaZvZXzc5OK09JzXMqLm56S5+bf6/hdrLbW0vkH2F7TmMn3r4yNPs4JUZOVKmpEnZtO3Sj7SrkIWNPdC4lrkNUsdsPm38vMbw7JIeb8rGPNMbPpWfX+h4a0FKaP0VPs1n8mSI9Jy8H2H8ReBDsZHqpW56w33nTAjV9JpTjb/Vn1/obm6vIiVWl/Hd5LkOlLaHd5n/M+DDlxfhTz/3pzp6OQ4x7ocvbf4yfjP319ori7qMfZm8uJix+fb5Z0Lv96n/cVPxn/+/gJYxm7ywNjyt9lnuYVg+bny+wvjW8y7vrmIBpaD0XY+p0K+s//PsAnaHv4Dxt8GfTL+CONjE78BeqyKv94K1F8AAAAASUVORK5CYII=" alt="Tap or scan to save Jaison Joseph's contact">
+      </div>
+    </a>
+
+    <h1>Jaison Joseph</h1>
+    <p class="title">CPA</p>
+
+    <div class="actions">
+      <a class="btn" href="tel:+18134709666">
+        <span class="icon">☎</span> (813) 470-9666
+      </a>
+      <a class="btn" href="mailto:jkadavil23@gmail.com">
+        <span class="icon">✉</span> jkadavil23@gmail.com
+      </a>
+      <span class="btn disabled">
+        <span class="icon">🌐</span> Website coming soon
+      </span>
+    </div>
+  </div>
+</body>
+</html>
