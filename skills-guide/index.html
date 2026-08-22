@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Claude Home Base — Skills Reference</title>
+<style>
+  :root {
+    --paper: #fbfaf9; --ink: #1a1c1e; --sub: #5b5f63;
+    --navy: #1d2d3d; --accent: #6b5344; --hair: #e3ddd6; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--sub); font-size: 15px; margin: 0 0 40px; }
+  h2 { font-size: 20px; margin: 48px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--navy); color: var(--navy); }
+  .cat-desc { color: var(--sub); font-size: 14px; margin: 0 0 18px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sub); padding: 8px 10px; border-bottom: 1px solid var(--hair); }
+  td { padding: 12px 10px; border-bottom: 1px solid var(--hair); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--navy); white-space: nowrap; }
+  .how { color: var(--accent); font-style: italic; }
+  .free { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: #2f6d3f; background: #e3f3e6; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
+  .acct { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: #8a5a12; background: #fbecd0; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
+  .note { background: var(--card); border: 1px solid var(--hair); border-radius: 10px; padding: 14px 16px; font-size: 13px; color: var(--sub); margin-top: 10px; }
+  @media print { body { background: white; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>My Claude Home Base — Skills Reference</h1>
+  <p class="sub">Every tool available for building client projects (websites, apps, branding, launches), organized by the kind of work it's for. <span class="free">FREE</span> = ready to use now, no signup. <span class="acct">ACCOUNT</span> = needs a free/paid account with that company first.</p>
+
+  <h2>1. Design &amp; UI — making it look good</h2>
+  <p class="cat-desc">Use for any client site, app, or mockup where the look/feel matters.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">frontend-design <span class="free">FREE</span></td><td>Pushes me to write polished, non-generic looking UI — better spacing, color, type choices — instead of default "AI-looking" pages.</td><td class="how">Runs automatically whenever I'm building/styling UI. No magic words needed.</td></tr>
+    <tr><td class="name">superdesign <span class="free">FREE</span></td><td>A visual design canvas — mock up a page, flow, or marketing graphic before any code exists. Can also copy the style of a live website.</td><td class="how">"design a homepage for..." / "redesign this like [site]" / "make a flyer for..."</td></tr>
+    <tr><td class="name">redesign-existing-site <span class="free">FREE</span></td><td>Our custom checklist for safely modernizing a client's old site without losing content.</td><td class="how">"redesign this old site" / "modernize my client's website"</td></tr>
+  </table>
+
+  <h2>2. Building the site (frontend code)</h2>
+  <p class="cat-desc">The actual coding help for websites, once design is settled.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">vercel:nextjs <span class="free">FREE</span></td><td>Expert guidance for building sites with Next.js (a common modern web framework) — routing, pages, data.</td><td class="how">Just ask normally — "build a page that shows..." — triggers automatically in a Next.js project</td></tr>
+    <tr><td class="name">vercel:shadcn <span class="free">FREE</span></td><td>Ready-made, good-looking UI building blocks (buttons, forms, menus) so you're not designing every piece from zero.</td><td class="how">"add a shadcn component for..." / happens automatically when adding UI</td></tr>
+    <tr><td class="name">vercel:react-best-practices <span class="free">FREE</span></td><td>Auto-checks your React code quality after edits — hooks misuse, accessibility, performance.</td><td class="how">Runs automatically after editing multiple component files</td></tr>
+  </table>
+
+  <h2>3. Backend &amp; data — logins, forms, storage, bookings</h2>
+  <p class="cat-desc">Any time a client's site needs to REMEMBER something (a contact form, patient intake, appointment, login).</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">firebase <span class="acct">ACCOUNT</span></td><td>One-stop backend: user logins, a database, file storage, hosting — good default for small client backends.</td><td class="how">Just ask directly — "set up a contact form that saves to a database" / "add login to this app"</td></tr>
+    <tr><td class="name">vercel:auth <span class="free">FREE</span></td><td>Guidance for adding a proper login system (Clerk/Auth0/Descope) to a site.</td><td class="how">"add user login to this site"</td></tr>
+    <tr><td class="name">vercel:vercel-storage <span class="free">FREE</span></td><td>Guidance for file storage or a real database (Postgres/Redis) when Firebase isn't the right fit.</td><td class="how">"where should I store [files/data] for this client"</td></tr>
+  </table>
+
+  <h2>4. Mobile apps</h2>
+  <p class="cat-desc">For the "apps" part of your services — one build that works on iPhone and Android.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">expo-router <span class="free">FREE</span></td><td>Handles screens/navigation in an app (like pages on a website, but for apps).</td><td class="how">Automatic once you're in an Expo app project</td></tr>
+    <tr><td class="name">expo-native-ui <span class="free">FREE</span></td><td>Makes screens look and feel genuinely native (iPhone-style), not like a website stuffed in an app.</td><td class="how">"make this screen feel native" — or automatic while styling app screens</td></tr>
+    <tr><td class="name">expo-design-system <span class="free">FREE</span></td><td>Keeps one consistent set of colors/fonts/spacing across an entire client app.</td><td class="how">"set up a theme for this app"</td></tr>
+    <tr><td class="name">eas-app-stores <span class="acct">ACCOUNT</span></td><td>Actually ships the finished app to the Apple App Store / Google Play.</td><td class="how">"submit this app to the app store" (needs a paid Apple/Google developer account too)</td></tr>
+  </table>
+
+  <h2>5. Going live — deploy &amp; domains</h2>
+  <p class="cat-desc">Turning a finished project into a real, working link a client can visit.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">ship-it <span class="free">FREE</span></td><td>Our custom checklist: same safe steps every time to publish/update a live site, so nothing gets skipped.</td><td class="how">"ship this" / "make it live" / "deploy this for the client"</td></tr>
+    <tr><td class="name">vercel:deploy <span class="acct">ACCOUNT</span></td><td>Actually pushes a project live on Vercel's hosting, with a real domain attachable.</td><td class="how">"deploy this to Vercel" (needs a free Vercel account)</td></tr>
+    <tr><td class="name">vercel:vercel-cli <span class="acct">ACCOUNT</span></td><td>Command-line control over deployments, domains, and environment settings.</td><td class="how">"check the deployment status" / "connect this domain"</td></tr>
+    <tr><td class="name">domain-name-brainstormer <span class="free">FREE</span></td><td>Our custom skill: helps pick (and checks availability of) a good domain name for you or a client.</td><td class="how">"what domain should I use for this dentist site"</td></tr>
+  </table>
+
+  <h2>6. Winning &amp; showing clients the work</h2>
+  <p class="cat-desc">Sales-side tools — before and after you build.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">pptx-generator <span class="free">FREE</span></td><td>Our custom skill: builds a proposal/pitch-deck slideshow (as a slick webpage, opens like a presentation) for a prospective client.</td><td class="how">"make me a proposal deck for the CPA office"</td></tr>
+    <tr><td class="name">social-post-cards <span class="free">FREE</span></td><td>Our custom skill: makes a properly-sized graphic for Instagram/LinkedIn/etc. to promote your services or a client launch.</td><td class="how">"make an Instagram post announcing the new site"</td></tr>
+  </table>
+
+  <h2>7. Quality &amp; safety checks</h2>
+  <p class="cat-desc">Especially important for doctor/CPA clients — they handle private patient/financial info.</p>
+  <table>
+    <tr><th>Skill</th><th>What it does</th><th>How to trigger it</th></tr>
+    <tr><td class="name">security-guidance <span class="free">FREE</span></td><td>Flags security mistakes (leaked info, unsafe forms) while I write code, plus a deeper check before you ship.</td><td class="how">Runs automatically while editing; or ask "check this for security issues"</td></tr>
+    <tr><td class="name">code-review <span class="free">FREE</span></td><td>A second pass over recent changes for bugs, not just security.</td><td class="how">/code-review</td></tr>
+  </table>
+
+</div>
+</body>
+</html>
