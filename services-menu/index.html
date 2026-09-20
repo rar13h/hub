@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services Menu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--paper:#f7f4ef;--ink:#161513;--navy:#1c2430;--gold:#a9812f;--line:#ddd5c6;--muted:#6f6a60}
+*{box-sizing:border-box}
+@page{size:letter;margin:0.45in}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.45 'IBM Plex Sans',-apple-system,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:28px 20px 60px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--gold);padding-bottom:12px}
+.brand{font:500 40px 'Cormorant Garamond',Georgia,serif;color:var(--navy);line-height:1}
+.tag{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.3em;color:var(--gold);margin-top:6px}
+.contact{text-align:right;font:400 11px 'IBM Plex Mono',monospace;color:var(--muted)}
+h1{font:500 28px 'Cormorant Garamond',Georgia,serif;color:var(--navy);margin:18px 0 2px}
+.lead{color:var(--muted);margin:0 0 10px}
+.fields{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
+.fields label{flex:1;min-width:150px;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.fields input,textarea{display:block;width:100%;background:#fff;border:0;border-bottom:1px solid var(--navy);padding:8px 6px;font:14px 'IBM Plex Sans',sans-serif;color:var(--ink);border-radius:0}
+textarea{border:1px solid var(--navy);min-height:80px;margin-top:4px}
+.cols{columns:2 340px;column-gap:32px}
+.grp{break-inside:avoid;margin-bottom:14px}
+h2{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:8px 0 4px;border-bottom:1px solid var(--navy);padding-bottom:4px}
+.row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.row input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:0 0 16px;height:16px;border:1.5px solid var(--navy);margin-top:2px;background:#fff;position:relative}
+.row input:checked+.box{background:var(--navy)}
+.row input:checked+.box::after{content:"";position:absolute;left:4px;top:0;width:4px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.row input:focus-visible+.box{outline:2px solid var(--gold);outline-offset:2px}
+.n{flex:1}
+.p{white-space:nowrap;font:500 12px 'IBM Plex Mono',monospace;color:var(--navy);padding-top:1px}
+.summary{margin-top:18px;border-top:2px solid var(--navy);padding-top:8px;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.summary div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line)}
+.summary .big{font-size:15px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+button{font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--navy);background:var(--navy);color:var(--paper);cursor:pointer}
+button.alt{background:transparent;color:var(--navy)}
+small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
+@media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}}
+</style></head><body><div class="wrap">
+<header><div><div class="brand">EkDin.Co</div><div class="tag">SERVICES MENU</div></div>
+<div class="contact">rar1228@ekdin.co<br>Payment via Zelle or Venmo</div></header>
+<h1>Choose what you need</h1>
+<p class="lead">Tick the services you are interested in. Your estimated total updates as you go.</p>
+<div class="fields"><label>Client<input id="client" type="text"></label><label>Date<input id="date" type="date"></label><label>Invoice no.<input id="inv" type="text"></label></div>
+<div class="cols"><div class="grp"><h2>Core website package</h2><label class="row"><input type="checkbox" data-lo="2000" data-hi="2000" data-m="0" data-name="Custom website design and build (desktop)"><span class="box"></span><span class="n">Custom website design and build (desktop)</span><span class="p">$2,000</span></label><label class="row"><input type="checkbox" data-lo="800" data-hi="800" data-m="0" data-name="Mobile version of the website"><span class="box"></span><span class="n">Mobile version of the website</span><span class="p">$800</span></label><label class="row"><input type="checkbox" data-lo="700" data-hi="700" data-m="0" data-name="Brand direction, logo and mark concepts"><span class="box"></span><span class="n">Brand direction, logo and mark concepts</span><span class="p">$700</span></label><label class="row"><input type="checkbox" data-lo="150" data-hi="150" data-m="0" data-name="Domain name registration and connection"><span class="box"></span><span class="n">Domain name registration and connection</span><span class="p">$150</span></label><label class="row"><input type="checkbox" data-lo="350" data-hi="350" data-m="0" data-name="Google Workspace setup"><span class="box"></span><span class="n">Google Workspace setup</span><span class="p">$350</span></label><label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Professional company email accounts"><span class="box"></span><span class="n">Professional company email accounts</span><span class="p">$250</span></label><label class="row"><input type="checkbox" data-lo="500" data-hi="500" data-m="0" data-name="Website hosting and live deployment"><span class="box"></span><span class="n">Website hosting and live deployment</span><span class="p">$500</span></label><label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Favicon and search preview setup"><span class="box"></span><span class="n">Favicon and search preview setup</span><span class="p">$250</span></label></div><div class="grp"><h2>Finish the site</h2><label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Content finalization (phone, address, credentials, founding year)"><span class="box"></span><span class="n">Content finalization (phone, address, credentials, founding year)</span><span class="p">$100 to $300</span></label><label class="row"><input type="checkbox" data-lo="500" data-hi="1500" data-m="0" data-name="Professional photography (headshot and office)"><span class="box"></span><span class="n">Professional photography (headshot and office)</span><span class="p">$500 to $1,500</span></label><label class="row"><input type="checkbox" data-lo="300" data-hi="1500" data-m="0" data-name="Client-facing copywriting (services, FAQ, how it works)"><span class="box"></span><span class="n">Client-facing copywriting (services, FAQ, how it works)</span><span class="p">$300 to $1,500</span></label></div><div class="grp"><h2>Get found</h2><label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Business Profile setup"><span class="box"></span><span class="n">Google Business Profile setup</span><span class="p">$100 to $300</span></label><label class="row"><input type="checkbox" data-lo="300" data-hi="1000" data-m="0" data-name="Local SEO setup"><span class="box"></span><span class="n">Local SEO setup</span><span class="p">$300 to $1,000</span></label><label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Analytics and Search Console"><span class="box"></span><span class="n">Google Analytics and Search Console</span><span class="p">$100 to $300</span></label><label class="row"><input type="checkbox" data-lo="50" data-hi="150" data-m="0" data-name="Review collection setup"><span class="box"></span><span class="n">Review collection setup</span><span class="p">$50 to $150</span></label></div><div class="grp"><h2>Turn visitors into clients</h2><label class="row"><input type="checkbox" data-lo="100" data-hi="400" data-m="0" data-name="Contact and booking form"><span class="box"></span><span class="n">Contact and booking form</span><span class="p">$100 to $400</span></label><label class="row"><input type="checkbox" data-lo="200" data-hi="600" data-m="0" data-name="Secure client document portal setup"><span class="box"></span><span class="n">Secure client document portal setup</span><span class="p">$200 to $600</span></label><label class="row"><input type="checkbox" data-lo="150" data-hi="400" data-m="0" data-name="Tax season landing page"><span class="box"></span><span class="n">Tax season landing page</span><span class="p">$150 to $400</span></label></div><div class="grp"><h2>Branding and marketing</h2><label class="row"><input type="checkbox" data-lo="300" data-hi="2500" data-m="0" data-name="Full logo and brand kit"><span class="box"></span><span class="n">Full logo and brand kit</span><span class="p">$300 to $2,500</span></label><label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Digital business card"><span class="box"></span><span class="n">Digital business card</span><span class="p">$100 to $300</span></label><label class="row"><input type="checkbox" data-lo="200" data-hi="800" data-m="0" data-name="Social post templates"><span class="box"></span><span class="n">Social post templates</span><span class="p">$200 to $800</span></label><label class="row"><input type="checkbox" data-lo="50" data-hi="200" data-m="0" data-name="Email signature and stationery"><span class="box"></span><span class="n">Email signature and stationery</span><span class="p">$50 to $200</span></label><label class="row"><input type="checkbox" data-lo="150" data-hi="450" data-m="0" data-name="Google Workspace extras (security, shared drive)"><span class="box"></span><span class="n">Google Workspace extras (security, shared drive)</span><span class="p">$150 to $450</span></label></div><div class="grp"><h2>Ongoing services (monthly)</h2><label class="row"><input type="checkbox" data-lo="50" data-hi="300" data-m="1" data-name="Website care plan (updates, backups, security)"><span class="box"></span><span class="n">Website care plan (updates, backups, security)</span><span class="p">$50 to $300 / mo</span></label><label class="row"><input type="checkbox" data-lo="300" data-hi="1500" data-m="1" data-name="Ongoing local SEO"><span class="box"></span><span class="n">Ongoing local SEO</span><span class="p">$300 to $1,500 / mo</span></label><label class="row"><input type="checkbox" data-lo="30" data-hi="100" data-m="1" data-name="Document portal software (third party)"><span class="box"></span><span class="n">Document portal software (third party)</span><span class="p">$30 to $100 / mo</span></label></div></div>
+<label class="fields" style="display:block;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">Notes<textarea id="notes"></textarea></label>
+<div class="summary">
+<div><span>One-time services selected</span><span id="cnt">0</span></div>
+<div class="big"><span>Estimated one-time total</span><span id="one">$0</span></div>
+<div><span>Estimated monthly total</span><span id="mo">$0</span></div></div>
+<div class="actions"><button id="pdf">Save as PDF</button><button class="alt" id="mail">Send selections to EkDin.Co</button></div>
+<small>Prices are estimates and vary with scope. Final pricing is confirmed on your invoice. Third-party software fees are billed by the provider.</small>
+</div>
+<script>
+(function(){
+var boxes=[].slice.call(document.querySelectorAll('input[type=checkbox]'));
+var $=function(id){return document.getElementById(id)};
+function money(n){return '$'+n.toLocaleString('en-US')}
+function range(a,b){return a===b?money(a):money(a)+' to '+money(b)}
+function calc(){
+  var o=[0,0],m=[0,0],c=0;
+  boxes.forEach(function(b){if(!b.checked)return;var t=b.dataset.m==='1'?m:o;t[0]+=+b.dataset.lo;t[1]+=+b.dataset.hi;if(t===o)c++});
+  $('cnt').textContent=c;$('one').textContent=range(o[0],o[1]);$('mo').textContent=range(m[0],m[1])+' / mo';
+  return {o:o,m:m};
+}
+boxes.forEach(function(b){b.addEventListener('change',calc)});
+$('pdf').addEventListener('click',function(){window.print()});
+$('mail').addEventListener('click',function(){
+  var t=calc(),sel=boxes.filter(function(b){return b.checked}).map(function(b){return '- '+b.dataset.name});
+  var body='Client: '+$('client').value+'\nDate: '+$('date').value+'\nInvoice no.: '+$('inv').value+'\n\nSelected services:\n'+(sel.join('\n')||'(none)')+'\n\nEstimated one-time total: '+range(t.o[0],t.o[1])+'\nEstimated monthly total: '+range(t.m[0],t.m[1])+'\n\nNotes: '+$('notes').value;
+  location.href='mailto:rar1228@ekdin.co?subject='+encodeURIComponent('Services menu selections'+($('client').value?' - '+$('client').value:''))+'&body='+encodeURIComponent(body);
+});
+calc();
+})();
+</script></body></html>
