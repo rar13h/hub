@@ -38,7 +38,7 @@ small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
 @media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}}
 </style></head><body><div class="wrap">
 <header><div><div class="brand">EkDin.Co</div><div class="tag">SERVICES MENU</div></div>
-<div class="contact">rar1228@ekdin.co<br>Payment via Zelle or Venmo</div></header>
+<div class="contact">team@ekdin.co<br>Payment via Zelle or Venmo</div></header>
 <h1>Choose what you need</h1>
 <p class="lead">Tick the services you are interested in. Your estimated total updates as you go.</p>
 <div class="fields"><label>Client<input id="client" type="text"></label><label>Date<input id="date" type="date"></label><label>Invoice no.<input id="inv" type="text"></label></div>
@@ -68,7 +68,7 @@ $('pdf').addEventListener('click',function(){window.print()});
 $('mail').addEventListener('click',function(){
   var t=calc(),sel=boxes.filter(function(b){return b.checked}).map(function(b){return '- '+b.dataset.name});
   var body='Client: '+$('client').value+'\nDate: '+$('date').value+'\nInvoice no.: '+$('inv').value+'\n\nSelected services:\n'+(sel.join('\n')||'(none)')+'\n\nEstimated one-time total: '+range(t.o[0],t.o[1])+'\nEstimated monthly total: '+range(t.m[0],t.m[1])+'\n\nNotes: '+$('notes').value;
-  location.href='mailto:rar1228@ekdin.co?subject='+encodeURIComponent('Services menu selections'+($('client').value?' - '+$('client').value:''))+'&body='+encodeURIComponent(body);
+  location.href='mailto:team@ekdin.co?subject='+encodeURIComponent('Services menu selections'+($('client').value?' - '+$('client').value:''))+'&body='+encodeURIComponent(body);
 });
 calc();
 })();
