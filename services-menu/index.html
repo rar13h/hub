@@ -17,15 +17,18 @@ h1{font:500 28px 'Cormorant Garamond',Georgia,serif;color:var(--navy);margin:18p
 .fields label{flex:1;min-width:150px;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
 .fields input,textarea{display:block;width:100%;background:#fff;border:0;border-bottom:1px solid var(--navy);padding:8px 6px;font:14px 'IBM Plex Sans',sans-serif;color:var(--ink);border-radius:0}
 textarea{border:1px solid var(--navy);min-height:80px;margin-top:4px}
-.build-box{border:1px solid var(--navy);background:#fff;padding:16px 18px;margin:14px 0 18px}
-.build-box h3{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
-.build-opt{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
-.build-opt:last-child{border-bottom:0}
-.build-opt .bn{font-weight:500}
-.build-opt .bd{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px;line-height:1.5}
-.build-opt .bp{white-space:nowrap;font:500 12px 'IBM Plex Mono',monospace;color:var(--navy);padding-left:14px}
-.rev-note{font-size:11.5px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
+.build-box{border-top:1px solid var(--line);padding:10px 0 0;margin:22px 0 0}
+.build-box h3{font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.build-opt{display:flex;justify-content:space-between;gap:14px;padding:4px 0}
+.build-opt .bn{font-weight:500;font-size:12.5px}
+.build-opt .bd{display:block;font-weight:400;color:var(--muted);font-size:11.5px;margin-top:2px;line-height:1.45}
+.build-opt .bp{white-space:nowrap;font:400 10.5px 'IBM Plex Mono',monospace;color:var(--muted);padding-left:14px}
+.build-opt.alt .bn{font-weight:400;font-size:11.5px;color:var(--muted)}
+.build-opt.alt .bd{font-size:11px}
+.build-alt-label{font:400 9.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:8px 0 2px}
+.rev-note{font-size:11px;color:var(--muted);margin-top:8px}
 .section-note{font-size:11.5px;color:var(--muted);margin:2px 0 8px;line-height:1.5}
+.pay-note{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--navy);margin:10px 0 0;line-height:1.5}
 .cols{columns:2 340px;column-gap:32px}
 .grp{break-inside:avoid;margin-bottom:14px}
 h2{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:8px 0 4px;border-bottom:1px solid var(--navy);padding-bottom:4px}
@@ -45,7 +48,7 @@ h2{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:u
 button{font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--navy);background:var(--navy);color:var(--paper);cursor:pointer}
 button.alt{background:transparent;color:var(--navy)}
 small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
-@media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}.row:not(:has(input:checked)){display:none}.grp:not(:has(input:checked)){display:none}}
+@media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}.row:not(:has(input:checked)){display:none}.grp:not(:has(input:checked)){display:none}.build-box{margin-top:14px}}
 </style></head><body><div class="wrap">
 <header><div><div class="brand">EkDin.Co</div><div class="tag">SERVICES MENU</div></div>
 <div class="contact">team@ekdin.co<br>Payment via Zelle or Venmo</div></header>
@@ -53,69 +56,67 @@ small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
 <p class="lead">I've selected what fits your project below. The estimated total updates as I check items, take a look and let me know if anything should change.</p>
 <div class="fields"><label>Client<input id="client" type="text"></label><label>Date<input id="date" type="date"></label><label>Invoice no.<input id="inv" type="text"></label></div>
 
-<div class="build-box">
-<h3>How your project gets built</h3>
-<div class="build-opt"><span class="bn">I build it<span class="bd">Custom, code-based site. Priced as scoped below.</span></span><span class="bp">See below</span></div>
-<div class="build-opt"><span class="bn">You build it, I teach you<span class="bd">I guide you step by step while you build it yourself.</span></span><span class="bp">$5,000</span></div>
-<div class="build-opt"><span class="bn">I build it on a platform you can edit<span class="bd">Built on a no-code platform (e.g. Webflow/Squarespace) so you can make your own edits after launch, with training on how.</span></span><span class="bp">$5,000</span></div>
-<div class="rev-note">Includes 5 rounds of revisions. After that, $200/hour, or a flat complexity-based price for larger changes.</div>
-</div>
-
 <div class="cols">
-<div class="grp"><h2>Core website package</h2>
-<label class="row"><input type="checkbox" data-lo="2500" data-hi="2500" data-m="0" data-name="Custom website design and build (desktop)"><span class="box"></span><span class="n">Custom website design and build (desktop)</span><span class="p">$2,500</span></label>
-<label class="row"><input type="checkbox" data-lo="500" data-hi="500" data-m="0" data-name="Mobile version of the website"><span class="box"></span><span class="n">Mobile version of the website</span><span class="p">$500</span></label>
-<label class="row"><input type="checkbox" data-lo="700" data-hi="700" data-m="0" data-name="Brand direction, logo and mark concepts"><span class="box"></span><span class="n">Brand direction, logo and mark concepts</span><span class="p">$700</span></label>
-<label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Domain name registration and connection"><span class="box"></span><span class="n">Domain name registration and connection</span><span class="p">$250</span></label>
-<label class="row"><input type="checkbox" data-lo="300" data-hi="300" data-m="0" data-name="Google Workspace setup"><span class="box"></span><span class="n">Google Workspace setup</span><span class="p">$300</span></label>
-<label class="row"><input type="checkbox" data-lo="200" data-hi="200" data-m="0" data-name="Professional company email accounts"><span class="box"></span><span class="n">Professional company email accounts</span><span class="p">$200</span></label>
-<label class="row"><input type="checkbox" data-lo="500" data-hi="500" data-m="0" data-name="Website hosting and live deployment"><span class="box"></span><span class="n">Website hosting and live deployment</span><span class="p">$500</span></label>
-<label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Favicon and search preview setup"><span class="box"></span><span class="n">Favicon and search preview setup</span><span class="p">$250</span></label>
+<div class="grp"><h2>Small business package setup</h2>
+<div class="section-note">Price and complexity vary with scope, from a simple one-page flat site up to a larger multi-page build.</div>
+<label class="row"><input type="checkbox" data-lo="2000" data-hi="4000" data-m="0" data-name="Custom website design and build (desktop)"><span class="box"></span><span class="n">Custom website design and build (desktop)<span class="d">A site designed and coded from scratch for your business, priced by how large and complex the build is.</span></span><span class="p">$2,000 to $4,000</span></label>
+<label class="row"><input type="checkbox" data-lo="500" data-hi="500" data-m="0" data-name="Mobile version of the website"><span class="box"></span><span class="n">Mobile version of the website<span class="d">The same site laid out again for phone screens, so it reads and taps correctly on mobile.</span></span><span class="p">$500</span></label>
+<label class="row"><input type="checkbox" data-lo="700" data-hi="700" data-m="0" data-name="Brand direction, logo and mark concepts"><span class="box"></span><span class="n">Brand direction, logo and mark concepts<span class="d">A few logo and mark options, plus the colors and type the site is built around.</span></span><span class="p">$700</span></label>
+<label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Domain name registration and connection"><span class="box"></span><span class="n">Domain name registration and connection<span class="d">We register your web address in your name and point it at your new site.</span></span><span class="p">$250</span></label>
+<label class="row"><input type="checkbox" data-lo="300" data-hi="300" data-m="0" data-name="Google Workspace setup"><span class="box"></span><span class="n">Google Workspace setup<span class="d">Your business Google account set up, with Gmail, Drive, and Calendar ready to use.</span></span><span class="p">$300</span></label>
+<label class="row"><input type="checkbox" data-lo="200" data-hi="200" data-m="0" data-name="Professional company email accounts"><span class="box"></span><span class="n">Professional company email accounts<span class="d">Real addresses at your own domain, like you@yourbusiness.com, instead of a personal Gmail.</span></span><span class="p">$200</span></label>
+<label class="row"><input type="checkbox" data-lo="500" data-hi="500" data-m="0" data-name="Website hosting and live deployment"><span class="box"></span><span class="n">Website hosting and live deployment<span class="d">We put the finished site on a server and take it live so anyone can visit it.</span></span><span class="p">$500</span></label>
+<label class="row"><input type="checkbox" data-lo="250" data-hi="250" data-m="0" data-name="Favicon and search preview setup"><span class="box"></span><span class="n">Favicon and search preview setup<span class="d">The small icon in the browser tab, plus how your link looks when it is shared or found on Google.</span></span><span class="p">$250</span></label>
 </div>
 
 <div class="grp"><h2>Finish the site</h2>
 <div class="section-note">The pieces that turn a built site into a finished, launch-ready one, real content instead of placeholders.</div>
 <label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Content finalization (phone, address, credentials, founding year)"><span class="box"></span><span class="n">Content finalization (phone, address, credentials, founding year)<span class="d">We collect and lock in the real business details so nothing launches as placeholder text.</span></span><span class="p">$100 to $300</span></label>
-<label class="row"><input type="checkbox" data-lo="500" data-hi="1500" data-m="0" data-name="Professional photography (headshot and office)"><span class="box"></span><span class="n">Professional photography (headshot and office)<span class="d">A short photo session for a founder headshot and workspace shots, used across the site and profiles.</span></span><span class="p">$500 to $1,500</span></label>
 <label class="row"><input type="checkbox" data-lo="300" data-hi="1500" data-m="0" data-name="Client-facing copywriting (services, FAQ, how it works)"><span class="box"></span><span class="n">Client-facing copywriting (services, FAQ, how it works)<span class="d">We write the actual words on the page, services, FAQ, how it works, so it reads clearly and sounds like you.</span></span><span class="p">$300 to $1,500</span></label>
 </div>
 
 <div class="grp"><h2>Get found</h2>
-<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Business Profile setup"><span class="box"></span><span class="n">Google Business Profile setup</span><span class="p">$100 to $300</span></label>
-<label class="row"><input type="checkbox" data-lo="300" data-hi="1000" data-m="0" data-name="Local SEO setup"><span class="box"></span><span class="n">Local SEO setup</span><span class="p">$300 to $1,000</span></label>
-<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Analytics and Search Console"><span class="box"></span><span class="n">Google Analytics and Search Console</span><span class="p">$100 to $300</span></label>
+<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Business Profile setup"><span class="box"></span><span class="n">Google Business Profile setup<span class="d">Your business listed on Google Maps and search with hours, photos, and contact details.</span></span><span class="p">$100 to $300</span></label>
+<label class="row"><input type="checkbox" data-lo="300" data-hi="1000" data-m="0" data-name="Local SEO setup"><span class="box"></span><span class="n">Local SEO setup<span class="d">Your site and listings set up so nearby people find you when they search for your service.</span></span><span class="p">$300 to $1,000</span></label>
+<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Google Analytics and Search Console"><span class="box"></span><span class="n">Google Analytics and Search Console<span class="d">Tracking installed so you can see how many people visit and how they found you.</span></span><span class="p">$100 to $300</span></label>
 <label class="row"><input type="checkbox" data-lo="50" data-hi="150" data-m="0" data-name="Review collection setup"><span class="box"></span><span class="n">Review collection setup<span class="d">A simple link or QR code clients can use to leave a Google review, plus a short script for when to ask.</span></span><span class="p">$50 to $150</span></label>
 </div>
 
 <div class="grp"><h2>Turn visitors into clients</h2>
-<label class="row"><input type="checkbox" data-lo="150" data-hi="350" data-m="0" data-name="Contact and booking form"><span class="box"></span><span class="n">Contact and booking form</span><span class="p">$150 to $350</span></label>
-<label class="row"><input type="checkbox" data-lo="250" data-hi="600" data-m="0" data-name="Secure client document portal setup"><span class="box"></span><span class="n">Secure client document portal setup</span><span class="p">$250 to $600</span></label>
+<label class="row"><input type="checkbox" data-lo="150" data-hi="350" data-m="0" data-name="Contact and booking form"><span class="box"></span><span class="n">Contact and booking form<span class="d">A form on the site that sends inquiries straight to your inbox or books time on your calendar.</span></span><span class="p">$150 to $350</span></label>
+<label class="row"><input type="checkbox" data-lo="250" data-hi="600" data-m="0" data-name="Secure client document portal setup"><span class="box"></span><span class="n">Secure client document portal setup<span class="d">A private, password-protected place for clients to upload and receive sensitive files.</span></span><span class="p">$250 to $600</span></label>
 </div>
 
 <div class="grp"><h2>Strategy &amp; advisory</h2>
-<label class="row"><input type="checkbox" data-lo="300" data-hi="800" data-m="0" data-name="Audits"><span class="box"></span><span class="n">Audits<span class="d">A review of what you have now, with a prioritized fix list.</span></span><span class="p">$300 to $800</span></label>
-<label class="row"><input type="checkbox" data-lo="400" data-hi="1200" data-m="0" data-name="Roadmapping"><span class="box"></span><span class="n">Roadmapping<span class="d">A working session that turns a list of ideas into a sequenced, priced-out plan.</span></span><span class="p">$400 to $1,200</span></label>
-<label class="row"><input type="checkbox" data-lo="150" data-hi="500" data-m="0" data-name="DIY guidance and checklists"><span class="box"></span><span class="n">DIY guidance &amp; checklists<span class="d">A written checklist and short walkthrough for what to do first, and what to bring in help for later.</span></span><span class="p">$150 to $500</span></label>
+<label class="row"><input type="checkbox" data-lo="400" data-hi="800" data-m="0" data-name="Audits"><span class="box"></span><span class="n">Audits<span class="d">A review of what you have now, with a prioritized fix list.</span></span><span class="p">$400 to $800</span></label>
+<label class="row"><input type="checkbox" data-lo="800" data-hi="2000" data-m="0" data-name="Roadmapping"><span class="box"></span><span class="n">Roadmapping<span class="d">A working session that turns a list of ideas into a sequenced, priced-out plan.</span></span><span class="p">$800 to $2,000</span></label>
+<label class="row"><input type="checkbox" data-lo="300" data-hi="600" data-m="0" data-name="DIY guidance and checklists"><span class="box"></span><span class="n">DIY guidance &amp; checklists<span class="d">A written checklist and short walkthrough for what to do first, and what to bring in help for later.</span></span><span class="p">$300 to $600</span></label>
 <label class="row"><input type="checkbox" data-lo="500" data-hi="2000" data-m="1" data-name="End-to-end consulting"><span class="box"></span><span class="n">End-to-end consulting<span class="d">Ongoing guidance on what to build, buy, or fix next, the person you call when you're not sure what your business needs technically.</span></span><span class="p">$500 to $2,000 / mo</span></label>
 </div>
 
 <div class="grp"><h2>Branding and marketing</h2>
-<label class="row"><input type="checkbox" data-lo="300" data-hi="2500" data-m="0" data-name="Full logo and brand kit"><span class="box"></span><span class="n">Full logo and brand kit</span><span class="p">$300 to $2,500</span></label>
-<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Digital business card"><span class="box"></span><span class="n">Digital business card</span><span class="p">$100 to $300</span></label>
-<label class="row"><input type="checkbox" data-lo="200" data-hi="800" data-m="0" data-name="Social post templates"><span class="box"></span><span class="n">Social post templates</span><span class="p">$200 to $800</span></label>
-<label class="row"><input type="checkbox" data-lo="50" data-hi="200" data-m="0" data-name="Email signature and stationery"><span class="box"></span><span class="n">Email signature and stationery</span><span class="p">$50 to $200</span></label>
-<label class="row"><input type="checkbox" data-lo="150" data-hi="450" data-m="0" data-name="Google Workspace extras (security, shared drive)"><span class="box"></span><span class="n">Google Workspace extras (security, shared drive)</span><span class="p">$150 to $450</span></label>
+<label class="row"><input type="checkbox" data-lo="300" data-hi="2500" data-m="0" data-name="Full logo and brand kit"><span class="box"></span><span class="n">Full logo and brand kit<span class="d">Final logo files in every format you need, plus your colors, fonts, and simple rules for using them.</span></span><span class="p">$300 to $2,500</span></label>
+<label class="row"><input type="checkbox" data-lo="100" data-hi="300" data-m="0" data-name="Digital business card"><span class="box"></span><span class="n">Digital business card<span class="d">A phone-friendly contact page with a QR code people can scan to save your details.</span></span><span class="p">$100 to $300</span></label>
+<label class="row"><input type="checkbox" data-lo="200" data-hi="800" data-m="0" data-name="Social post templates"><span class="box"></span><span class="n">Social post templates<span class="d">Reusable, on-brand layouts you drop your own text and photos into before posting.</span></span><span class="p">$200 to $800</span></label>
+<label class="row"><input type="checkbox" data-lo="50" data-hi="200" data-m="0" data-name="Email signature and stationery"><span class="box"></span><span class="n">Email signature and stationery<span class="d">A matching email signature and letterhead so your paperwork looks like your site.</span></span><span class="p">$50 to $200</span></label>
+<label class="row"><input type="checkbox" data-lo="150" data-hi="450" data-m="0" data-name="Google Workspace extras (security, shared drive)"><span class="box"></span><span class="n">Google Workspace extras (security, shared drive)<span class="d">Added security settings and a shared team drive so company files stay organized and protected.</span></span><span class="p">$150 to $450</span></label>
 </div>
 
 <div class="grp"><h2>AI &amp; online sales</h2>
-<label class="row"><input type="checkbox" data-lo="400" data-hi="1500" data-m="0" data-name="Chat bot / AI assistant widget (FAQ or concierge style)"><span class="box"></span><span class="n">Chat bot / AI assistant widget (FAQ or concierge style)</span><span class="p">$400 to $1,500</span></label>
-<label class="row"><input type="checkbox" data-lo="500" data-hi="2500" data-m="0" data-name="Online store / e-commerce setup"><span class="box"></span><span class="n">Online store / e-commerce setup</span><span class="p">$500 to $2,500</span></label>
+<label class="row"><input type="checkbox" data-lo="500" data-hi="1500" data-m="0" data-name="Chat bot / AI assistant widget (FAQ or concierge style)"><span class="box"></span><span class="n">Chat bot / AI assistant widget (FAQ or concierge style)<span class="d">A chat window on your site that answers common questions and passes real leads to you.</span></span><span class="p">$500 to $1,500</span></label>
+<label class="row"><input type="checkbox" data-lo="500" data-hi="2500" data-m="0" data-name="Online store / e-commerce setup"><span class="box"></span><span class="n">Online store / e-commerce setup<span class="d">Your products or services listed with checkout and payments, so you can sell directly on the site.</span></span><span class="p">$500 to $2,500</span></label>
 </div>
 
 <div class="grp"><h2>Ongoing services (monthly)</h2>
-<label class="row"><input type="checkbox" data-lo="50" data-hi="300" data-m="1" data-name="Website care plan (updates, backups, security)"><span class="box"></span><span class="n">Website care plan (updates, backups, security)</span><span class="p">$50 to $300 / mo</span></label>
-<label class="row"><input type="checkbox" data-lo="300" data-hi="1500" data-m="1" data-name="Ongoing local SEO"><span class="box"></span><span class="n">Ongoing local SEO</span><span class="p">$300 to $1,500 / mo</span></label>
-<label class="row"><input type="checkbox" data-lo="30" data-hi="100" data-m="1" data-name="Document portal software (third party)"><span class="box"></span><span class="n">Document portal software (third party)</span><span class="p">$30 to $100 / mo</span></label>
+<label class="row"><input type="checkbox" data-lo="100" data-hi="400" data-m="1" data-name="Website care plan (updates, backups, security)"><span class="box"></span><span class="n">Website care plan (updates, backups, security)<span class="d">Monthly content updates, backups, and security checks so the site stays current and safe.</span></span><span class="p">$100 to $400 / mo</span></label>
+<label class="row"><input type="checkbox" data-lo="300" data-hi="1500" data-m="1" data-name="Ongoing local SEO"><span class="box"></span><span class="n">Ongoing local SEO<span class="d">Continued listing upkeep, review prompts, and content work to hold and grow your local ranking.</span></span><span class="p">$300 to $1,500 / mo</span></label>
+<label class="row"><input type="checkbox" data-lo="30" data-hi="100" data-m="1" data-name="Document portal software (third party)"><span class="box"></span><span class="n">Document portal software (third party)<span class="d">The monthly software fee for the secure client portal, passed through at cost.</span></span><span class="p">$30 to $100 / mo</span></label>
+</div>
+
+<div class="grp"><h2>Post-launch: who manages updates?</h2>
+<label class="row"><input type="checkbox" data-lo="0" data-hi="0" data-m="0" data-name="You call, I make the edits (covered by care plan)"><span class="box"></span><span class="n">You call, I make the edits (covered by care plan above)<span class="d">You send the change by email or text and I handle it, included in the monthly care plan.</span></span><span class="p">See care plan</span></label>
+<label class="row"><input type="checkbox" data-lo="150" data-hi="400" data-m="0" data-name="Editable content file for key fields, plus a how-to guide"><span class="box"></span><span class="n">Editable content file for key fields, plus a how-to guide<span class="d">A simple file where you can change key text yourself, with a short written guide on how.</span></span><span class="p">$150 to $400</span></label>
+<label class="row"><input type="checkbox" data-lo="0" data-hi="0" data-m="0" data-name="Full self-service platform rebuild (WordPress or another CMS)"><span class="box"></span><span class="n">Full self-service platform rebuild (WordPress or another CMS)<span class="d">The site rebuilt on a system where your team edits every page, scoped as its own project.</span></span><span class="p">Scoped as new project</span></label>
 </div>
 </div>
 <label class="fields" style="display:block;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">Notes<textarea id="notes"></textarea></label>
@@ -123,7 +124,18 @@ small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
 <div><span>One-time services selected</span><span id="cnt">0</span></div>
 <div class="big"><span>Estimated one-time total</span><span id="one">$0</span></div>
 <div><span>Estimated monthly total</span><span id="mo">$0</span></div></div>
+<div class="pay-note">Payment terms: 50% deposit due to start, remaining 50% due at project completion.</div>
 <div class="actions"><button id="pdf">Save as PDF</button><button class="alt" id="mail">Send selections to EkDin.Co</button></div>
+
+<div class="build-box">
+<h3>How your project gets built</h3>
+<div class="build-opt"><span class="bn">I build it<span class="bd">The default. A custom, code-based site designed and built by me, priced by complexity as scoped above. This is the path everything on this menu is priced for, and the one I recommend.</span></span><span class="bp">See above</span></div>
+<div class="build-alt-label">Side options</div>
+<div class="build-opt alt"><span class="bn">You build it, I teach you<span class="bd">I guide you step by step while you build it yourself.</span></span><span class="bp">$5,000</span></div>
+<div class="build-opt alt"><span class="bn">I build it on a platform you can edit<span class="bd">Built on a no-code platform so you can make your own edits after launch, with training on how.</span></span><span class="bp">$5,000</span></div>
+<div class="rev-note">Includes 5 rounds of revisions. After that, $200/hour, or a flat complexity-based price for larger changes.</div>
+</div>
+
 <small>This is an estimate based on our discussion. Any new requests or major changes and the price will adjust. Prices are estimates and vary with scope, final pricing is confirmed on your invoice.</small>
 </div>
 <script>
@@ -142,7 +154,7 @@ boxes.forEach(function(b){b.addEventListener('change',calc)});
 $('pdf').addEventListener('click',function(){window.print()});
 $('mail').addEventListener('click',function(){
   var t=calc(),sel=boxes.filter(function(b){return b.checked}).map(function(b){return '- '+b.dataset.name});
-  var body='Client: '+$('client').value+'\nDate: '+$('date').value+'\nInvoice no.: '+$('inv').value+'\n\nSelected services:\n'+(sel.join('\n')||'(none)')+'\n\nEstimated one-time total: '+range(t.o[0],t.o[1])+'\nEstimated monthly total: '+range(t.m[0],t.m[1])+'\n\nNotes: '+$('notes').value;
+  var body='Client: '+$('client').value+'\nDate: '+$('date').value+'\nInvoice no.: '+$('inv').value+'\n\nSelected services:\n'+(sel.join('\n')||'(none)')+'\n\nEstimated one-time total: '+range(t.o[0],t.o[1])+'\nEstimated monthly total: '+range(t.m[0],t.m[1])+'\n\nNotes: '+$('notes').value+'\n\nPayment terms: 50% deposit due to start, remaining 50% due at project completion.';
   location.href='mailto:team@ekdin.co?subject='+encodeURIComponent('Services menu selections'+($('client').value?' - '+$('client').value:''))+'&body='+encodeURIComponent(body);
 });
 calc();
