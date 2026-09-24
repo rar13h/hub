@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EkDin.Co Signature</title>
+<meta name="robots" content="noindex">
+<style>
+body{margin:0;background:#f7f4ef;color:#161513;font:14px/1.5 -apple-system,Arial,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:40px 20px}
+.label{font:500 10px ui-monospace,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:#6f6a60;margin:0 0 10px}
+.card{background:#fff;border:1px solid #ddd5c6;padding:28px 24px}
+button{margin-top:18px;font:500 12px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1px solid #1c2430;background:#1c2430;color:#f7f4ef;cursor:pointer}
+.how{color:#6f6a60;font-size:13px;margin-top:22px}
+.how li{margin:4px 0}
+</style></head><body><div class="wrap">
+<p class="label">Email signature preview</p>
+<div class="card"><div id="sig">
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;color:#161513">
+<tr>
+<td style="padding:0 16px 0 0;vertical-align:middle;border-right:1px solid #a9812f"><a href="https://ekdin.co" style="text-decoration:none"><img src="https://card.ekdin.co/signature/mark.png" width="32" height="66" alt="EkDin.Co" style="display:block;border:0;width:32px;height:66px"></a></td>
+<td style="padding:0 0 0 16px;vertical-align:middle">
+<div style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:24px;line-height:26px;font-weight:500;color:#1c2430">EkDin.Co</div>
+<div style="font-family:'Courier New',Courier,monospace;font-size:10px;line-height:14px;letter-spacing:2px;text-transform:uppercase;color:#a9812f;padding:3px 0 8px">Technical Consulting</div>
+<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6f6a60"><a href="mailto:team@ekdin.co" style="color:#1c2430;text-decoration:none">team@ekdin.co</a>&nbsp;&nbsp;<span style="color:#a9812f">|</span>&nbsp;&nbsp;<a href="https://ekdin.co" style="color:#1c2430;text-decoration:none">ekdin.co</a>&nbsp;&nbsp;<span style="color:#a9812f">|</span>&nbsp;&nbsp;<a href="https://instagram.com/ek_din.co" style="color:#1c2430;text-decoration:none">@ek_din.co</a></div>
+</td>
+</tr>
+</table>
+</div></div>
+<button id="copy">Copy signature</button>
+<ol class="how">
+<li>Click <b>Copy signature</b>.</li>
+<li>Gmail: Settings (gear) &gt; See all settings &gt; General &gt; Signature &gt; Create new.</li>
+<li>Paste into the signature box, then Save Changes at the bottom.</li>
+</ol>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var el=document.getElementById('sig'),b=this;
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy signature'},1800)}
+  try{
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([el.innerHTML],{type:'text/html'}),'text/plain':new Blob([el.innerText],{type:'text/plain'})})]).then(done,fallback);
+  }catch(e){fallback()}
+  function fallback(){var r=document.createRange();r.selectNode(el);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();done()}
+});
+</script>
+</body></html>
