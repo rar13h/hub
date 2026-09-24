@@ -26,6 +26,7 @@ textarea{border:1px solid var(--navy);min-height:80px;margin-top:4px}
 .build-opt.alt .bn{font-weight:400;font-size:11.5px;color:var(--muted)}
 .build-opt.alt .bd{font-size:11px}
 .build-alt-label{font:400 9.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:8px 0 2px}
+.notes-print{display:none;white-space:pre-wrap;font-size:12px;color:var(--ink);margin:10px 0 0;line-height:1.5}
 .rev-note{font-size:11px;color:var(--muted);margin-top:8px}
 .section-note{font-size:11.5px;color:var(--muted);margin:2px 0 8px;line-height:1.5}
 .pay-note{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--navy);margin:10px 0 0;line-height:1.5}
@@ -48,7 +49,7 @@ h2{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:u
 button{font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--navy);background:var(--navy);color:var(--paper);cursor:pointer}
 button.alt{background:transparent;color:var(--navy)}
 small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
-@media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}.row:not(:has(input:checked)){display:none}.grp:not(:has(input:checked)){display:none}.build-box{margin-top:14px}}
+@media print{.actions{display:none}.wrap{padding:0}body{font-size:12px}.row{padding:4px 0}.fields input{padding:2px 4px}textarea{min-height:50px}.row:not(:has(input:checked)){display:none}.grp:not(:has(input:checked)){display:none}.build-box{margin-top:14px;border-top:0;padding-top:0}.build-box h3,.build-opt,.build-alt-label{display:none}.notes-field{display:none!important}.notes-print:not(:empty){display:block}}
 </style></head><body><div class="wrap">
 <header><div><div class="brand">EkDin.Co</div><div class="tag">SERVICES MENU</div></div>
 <div class="contact">team@ekdin.co<br>Payment via Zelle or Venmo</div></header>
@@ -119,7 +120,8 @@ small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
 <label class="row"><input type="checkbox" data-lo="0" data-hi="0" data-m="0" data-name="Full self-service platform rebuild (WordPress or another CMS)"><span class="box"></span><span class="n">Full self-service platform rebuild (WordPress or another CMS)<span class="d">The site rebuilt on a system where your team edits every page, scoped as its own project.</span></span><span class="p">Scoped as new project</span></label>
 </div>
 </div>
-<label class="fields" style="display:block;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">Notes<textarea id="notes"></textarea></label>
+<label class="fields notes-field" style="display:block;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">Notes<textarea id="notes"></textarea></label>
+<div id="notes-print" class="notes-print"></div>
 <div class="summary">
 <div><span>One-time services selected</span><span id="cnt">0</span></div>
 <div class="big"><span>Estimated one-time total</span><span id="one">$0</span></div>
@@ -133,7 +135,7 @@ small{display:block;margin-top:18px;color:var(--muted);font-size:12px}
 <div class="build-alt-label">Side options</div>
 <div class="build-opt alt"><span class="bn">You build it, I teach you<span class="bd">I guide you step by step while you build it yourself.</span></span><span class="bp">$5,000</span></div>
 <div class="build-opt alt"><span class="bn">I build it on a platform you can edit<span class="bd">Built on a no-code platform so you can make your own edits after launch, with training on how.</span></span><span class="bp">$5,000</span></div>
-<div class="rev-note">Includes 5 rounds of revisions. After that, $200/hour, or a flat complexity-based price for larger changes.</div>
+<div class="rev-note">Includes 4 rounds of revisions. After that, $250/hour, or a flat complexity-based price for larger changes.</div>
 </div>
 
 <small>This is an estimate based on our discussion. Any new requests or major changes and the price will adjust. Prices are estimates and vary with scope, final pricing is confirmed on your invoice.</small>
@@ -151,7 +153,9 @@ function calc(){
   return {o:o,m:m};
 }
 boxes.forEach(function(b){b.addEventListener('change',calc)});
-$('pdf').addEventListener('click',function(){window.print()});
+function syncNotes(){$('notes-print').textContent=$('notes').value.trim()}
+$('notes').addEventListener('input',syncNotes);window.addEventListener('beforeprint',syncNotes);
+$('pdf').addEventListener('click',function(){syncNotes();window.print()});
 $('mail').addEventListener('click',function(){
   var t=calc(),sel=boxes.filter(function(b){return b.checked}).map(function(b){return '- '+b.dataset.name});
   var body='Client: '+$('client').value+'\nDate: '+$('date').value+'\nInvoice no.: '+$('inv').value+'\n\nSelected services:\n'+(sel.join('\n')||'(none)')+'\n\nEstimated one-time total: '+range(t.o[0],t.o[1])+'\nEstimated monthly total: '+range(t.m[0],t.m[1])+'\n\nNotes: '+$('notes').value+'\n\nPayment terms: 50% deposit due to start, remaining 50% due at project completion.';
