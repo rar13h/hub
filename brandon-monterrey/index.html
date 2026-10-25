@@ -26,11 +26,12 @@
   .actions { display: grid; gap: 10px; margin-bottom: 22px; text-align: left; }
   .btn { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
   .icon { width: 20px; text-align: center; flex-shrink: 0; }
-  .bottom-row { display: flex; align-items: center; gap: 10px; }
+  .bottom-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
   .socials { display: flex; gap: 10px; flex-shrink: 0; }
   .social { width: 48px; height: 48px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .social svg { width: 22px; height: 22px; fill: var(--bg); }
-  .save-btn { flex: 1; justify-content: center; font-size: 15px; padding: 15px 10px; background: var(--primary); color: var(--bg); border-color: var(--primary); font-weight: 600; }
+  .save-btn { justify-content: center; font-size: 15px; padding: 15px 18px; background: var(--primary); color: var(--bg); border-color: var(--primary); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -64,6 +65,7 @@
       <a class="btn save-btn" href="brandon.vcf" download>
         <span class="icon">＋</span> Save to Contacts
       </a>
+      <div class="divider"></div>
       <div class="socials">
       <a class="social" href="https://instagram.com/monterreyjewelry" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465a4.9 4.9 0 0 1 1.772 1.153 4.9 4.9 0 0 1 1.153 1.772c.248.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.05 1.065-.217 1.79-.465 2.428a4.9 4.9 0 0 1-1.153 1.772 4.9 4.9 0 0 1-1.772 1.153c-.637.248-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.05-1.79-.217-2.428-.465a4.9 4.9 0 0 1-1.772-1.153 4.9 4.9 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.01 15.056 2 14.717 2 12s.01-3.056.06-4.122c.05-1.065.217-1.79.465-2.428a4.9 4.9 0 0 1 1.153-1.772A4.9 4.9 0 0 1 5.45 2.525c.637-.248 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.25a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5ZM17.4 6.6a1.17 1.17 0 1 1-2.34 0 1.17 1.17 0 0 1 2.34 0Z"/></svg>
